@@ -1,50 +1,74 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-body {
-  background: rgb(134, 196, 227);
-  background: radial-gradient(
-    circle,
-    rgba(134, 196, 227, 1) 31%,
-    rgba(137, 210, 245, 1) 52%,
-    rgba(122, 131, 158, 1) 90%
-  );
-}
+/* App.css */
 
 .app {
-  text-align: center;
-  padding: 20px;
+  font-family: "Arial", sans-serif;
   max-width: 800px;
   margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
 }
 
 .product-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20;
+  margin-top: 20px;
 }
 
 .product-card {
-  border: 2px solid rgb(31, 31, 119);
-  border-radius: 10px;
-  background: rgb(72, 72, 78);
-  background: linear-gradient(
-    90deg,
-    rgba(72, 72, 78, 1) 0%,
-    rgba(247, 247, 247, 1) 48%,
-    rgba(148, 148, 148, 1) 100%
-  );
-  margin: 5px;
-  padding: 20px;
-  width: 340px;
-  font-size: 1em;
+  width: 300px;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 15px;
+  text-align: left;
 }
 
 .product-card img {
-  width: 150px;
-  border-radius: 10px;
+  width: 100px; /* Hace que todas las imágenes ocupen el 100% del ancho del contenedor */
+  height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+.add-product-form {
+  margin-top: 40px;
+}
+
+form {
+  display: grid;
+  grid-gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.rating {
+  color: #ff9800;
+  font-size: 16px;
+  margin-top: 5px;
 }
