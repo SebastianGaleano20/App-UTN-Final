@@ -42,7 +42,7 @@ const App = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    
     try {
       await axios.post(
         `${import.meta.env.VITE_REACT_APP_API_URL}/product`,
@@ -55,16 +55,17 @@ const App = () => {
       console.log(response.data);
       setProducts(response.data);
       setFormData({
-        title: "",
+        title: " ",
         price: 0,
-        description: "",
-        category: "",
-        image: "",
+        description: " ",
+        category: " ",
+        image: " ",
         rating: { rate: 0, count: 0 },
       });
     } catch (error) {
       console.error("Error submitting data:", error);
     }
+    window.location.reload();
   };
 
   return (
